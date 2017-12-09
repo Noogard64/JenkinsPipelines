@@ -12,7 +12,7 @@ pipeline{
 					words.each{
 						bat 'echo '& it
 					}
-				/}
+				//}
 			}
         }
     }
