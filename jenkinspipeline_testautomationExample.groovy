@@ -39,6 +39,13 @@ pipeline{
 						bat 'C:\ReadyAPI-1.9.0\bin\testrunner.bat -0 "-RProject Report" -FPDF "-EDefault environment" %WORKSPACE%'
 					}
 				}
+				stage('execute postman tests'){
+					agent {label 'not master'} //need to verify syntax here
+					steps{
+						bat 'echo executing tests'
+					}
+				}
+
 			}
 		}
 	}
