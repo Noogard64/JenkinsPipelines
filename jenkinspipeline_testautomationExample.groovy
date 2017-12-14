@@ -45,6 +45,13 @@ pipeline{
 						sh '"%WORKSPACE%\newman Backup.postman_dump.json"'
 					}
 				}
+				stage('execute example method'){
+					agent {label 'not master'} //need to verify syntax here
+					steps{
+						exampleMethod()
+					}						
+				
+				}
 
 			}
 		}
