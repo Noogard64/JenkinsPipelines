@@ -42,7 +42,7 @@ pipeline{
 				stage('execute postman tests'){
 					agent {label 'not master'} //need to verify syntax here
 					steps{
-						bat 'echo executing tests'
+						sh '"%WORKSPACE%\newman Backup.postman_dump.json"'
 					}
 				}
 
